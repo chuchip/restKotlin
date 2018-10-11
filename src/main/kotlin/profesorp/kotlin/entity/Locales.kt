@@ -24,13 +24,10 @@ data class Locales  (@Id  @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 5)
 	@JsonProperty(value = "codigo")
-    @Column(name = "loc_codi") val locCodi: String,
+    @Column(name = "loc_codi") val codigo: String,
 	@JsonProperty(value = "nombre")
-    @Column(name = "loc_nomb") val nombre: String,
-    @JsonIgnore  @OneToMany( mappedBy = "locCodi", fetch = FetchType.LAZY)
-    val paisesCollection:  List<Paises>
+    @Column(name = "nombre") val nombre: String 
    )
 {
-
-		 
+	
 }
